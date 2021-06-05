@@ -118,6 +118,8 @@ public class EventControllerIT {
 		String accessToken = tokenUtil.obtainAccessToken(mockMvc, adminUsername, adminPassword);
 		LocalDate nextMonth = LocalDate.now().plusMonths(1L);
 		
+		System.out.println(nextMonth);
+		
 		EventDTO dto = new EventDTO(null, "      ", nextMonth, "https://expoxp.com.br", 1L);
 		String jsonBody = objectMapper.writeValueAsString(dto);
 		
